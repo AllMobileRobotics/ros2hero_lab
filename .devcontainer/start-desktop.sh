@@ -13,6 +13,8 @@ if curl -s -o /dev/null "http://127.0.0.1:$PORT/"; then echo "เดสก์ท
 # เทอร์มินัลของ VS Code เป็น root — สองผู้ใช้คุยกันใน ROS 2 ได้เพราะบังคับ DDS ใช้ UDP (ดู FASTDDS_BUILTIN_TRANSPORTS)
 sed -e "s#websockify --web=/usr/lib/novnc 80 #websockify --web=/usr/lib/novnc $PORT #" \
     -e 's#^exec /bin/tini -- supervisord#exec supervisord#' /entrypoint.sh > /tmp/r2h-entrypoint.sh
+# 🔴 LANG ต้องเป็น UTF-8 — ไม่งั้นเทอร์มินัลนับความกว้างภาษาไทยผิด วางโค้ดที่มีคอมเมนต์ไทยแล้วบรรทัดทับกันอ่านไม่ออก
+export LANG=C.UTF-8
 USER=ubuntu PASSWORD=ubuntu nohup setsid bash /tmp/r2h-entrypoint.sh > /tmp/r2h-desktop.log 2>&1 < /dev/null &
 
 for i in $(seq 60); do curl -s -o /dev/null "http://127.0.0.1:$PORT/" && break; sleep 1; done

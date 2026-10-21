@@ -13,7 +13,9 @@
   "remoteUser": "root",
   // เทอร์มินัลของ VS Code (root) เปิดหน้าต่าง (เต่า · rqt) ไปที่เดสก์ท็อปพอร์ต 6080 ของผู้ใช้ ubuntu
   // และคุยใน ROS 2 กับโปรแกรมที่เปิดจากเดสก์ท็อปได้ — ต้องใช้ UDP (shared memory ข้ามผู้ใช้ไม่ได้)
+  // LANG UTF-8 — วางโค้ดที่มีคอมเมนต์ภาษาไทยแล้วบรรทัดไม่ทับกัน
   "remoteEnv": {
+    "LANG": "C.UTF-8",
     "DISPLAY": ":1",
     "XAUTHORITY": "/home/ubuntu/.Xauthority",
     "ROS_DOMAIN_ID": "30",
