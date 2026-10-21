@@ -15,4 +15,7 @@ lock-enabled=false
 OVR
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
+# เทอร์มินัลของ VS Code (root) ให้รู้จักคำสั่ง ros2 ทันที
+grep -q "jazzy/setup.bash" /root/.bashrc || echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc
+
 echo "✅ ลงเสร็จ"
