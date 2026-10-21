@@ -3,14 +3,15 @@
   // เปิดใน GitHub Codespaces: กดปุ่ม "เปิด lab" ในบทเรียนบน ros2hero.allmobilerobotics.com
   "name": "ROS2 Hero lab (ROS 2 Jazzy + TurtleBot3)",
   "image": "tiryoh/ros2-desktop-vnc:jazzy",
-  // ใช้คำสั่งเริ่มของ image เอง — ตัวนั้นเปิดเดสก์ท็อป + noVNC ที่พอร์ต 80
-  "overrideCommand": false,
   "runArgs": ["--shm-size=1g"],
-  "forwardPorts": [80],
+  // เดสก์ท็อปเปิดที่พอร์ต 6080 โดย start-desktop.sh (ไม่ใช้ 80 — ดูเหตุผลในไฟล์นั้น)
+  "forwardPorts": [6080],
   "portsAttributes": {
-    "80": { "label": "เดสก์ท็อป ROS 2 (เปิดอันนี้)", "onAutoForward": "openBrowser" }
+    "6080": { "label": "เดสก์ท็อป ROS 2 (เปิดอันนี้)", "onAutoForward": "openBrowser" }
   },
+  "otherPortsAttributes": { "onAutoForward": "ignore" },
   "remoteUser": "root",
   "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start-desktop.sh",
   "hostRequirements": { "cpus": 2, "memory": "8gb" }
 }
