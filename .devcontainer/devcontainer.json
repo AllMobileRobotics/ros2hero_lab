@@ -1,0 +1,16 @@
+{
+  // ROS2 Hero lab — เดสก์ท็อป Ubuntu ในเบราว์เซอร์ + ROS 2 Jazzy + TurtleBot3
+  // เปิดใน GitHub Codespaces: กดปุ่ม "เปิด lab" ในบทเรียนบน ros2hero.allmobilerobotics.com
+  "name": "ROS2 Hero lab (ROS 2 Jazzy + TurtleBot3)",
+  "image": "tiryoh/ros2-desktop-vnc:jazzy",
+  // ใช้คำสั่งเริ่มของ image เอง — ตัวนั้นเปิดเดสก์ท็อป + noVNC ที่พอร์ต 80
+  "overrideCommand": false,
+  "runArgs": ["--shm-size=1g"],
+  "forwardPorts": [80],
+  "portsAttributes": {
+    "80": { "label": "เดสก์ท็อป ROS 2 (เปิดอันนี้)", "onAutoForward": "openBrowser" }
+  },
+  "remoteUser": "root",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "hostRequirements": { "cpus": 2, "memory": "8gb" }
+}
