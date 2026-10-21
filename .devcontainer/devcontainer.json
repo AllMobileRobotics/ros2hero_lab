@@ -1,7 +1,7 @@
 {
-  // ROS2 Hero lab — เดสก์ท็อป Ubuntu ในเบราว์เซอร์ + ROS 2 Jazzy + TurtleBot3
+  // ROS2 Hero lab — เดสก์ท็อป Ubuntu ในเบราว์เซอร์ + ROS 2 Jazzy
   // เปิดใน GitHub Codespaces: กดปุ่ม "เปิด lab" ในบทเรียนบน ros2hero.allmobilerobotics.com
-  "name": "ROS2 Hero lab (ROS 2 Jazzy + TurtleBot3)",
+  "name": "ROS2 Hero lab (ROS 2 Jazzy)",
   "image": "tiryoh/ros2-desktop-vnc:jazzy",
   "runArgs": ["--shm-size=1g"],
   // เดสก์ท็อปเปิดที่พอร์ต 6080 โดย start-desktop.sh (ไม่ใช้ 80 — ดูเหตุผลในไฟล์นั้น)

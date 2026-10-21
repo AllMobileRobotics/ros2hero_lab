@@ -18,9 +18,9 @@ if ! curl -s -o /dev/null "http://127.0.0.1:$PORT/"; then
   echo "🔴 เดสก์ท็อปเปิดไม่ขึ้น — ดู /tmp/r2h-desktop.log"; tail -20 /tmp/r2h-desktop.log; exit 1
 fi
 
-# ค่าสำหรับ lab + แบบฝึกหัดบนเดสก์ท็อป (ผู้ใช้ ubuntu ถูกสร้างโดยตัวเริ่มข้างบน)
+# ค่าสำหรับ lab + ไฟล์เริ่มที่นี่บนเดสก์ท็อป (ผู้ใช้ ubuntu ถูกสร้างโดยตัวเริ่มข้างบน)
 B=/home/ubuntu/.bashrc
-grep -q TURTLEBOT3_MODEL "$B" 2>/dev/null || printf '\n# ROS2 Hero\nexport TURTLEBOT3_MODEL=waffle\nexport ROS_DOMAIN_ID=30\n' >> "$B"
-cp -n "$(dirname "$0")"/../labs/step2/*.txt /home/ubuntu/Desktop/ 2>/dev/null || true
+grep -q ROS_DOMAIN_ID "$B" 2>/dev/null || printf '\n# ROS2 Hero\nexport ROS_DOMAIN_ID=30\n' >> "$B"
+cp -n "$(dirname "$0")"/../labs/*.txt /home/ubuntu/Desktop/ 2>/dev/null || true
 chown -R ubuntu:ubuntu /home/ubuntu/Desktop "$B" 2>/dev/null || true
 echo "✅ เดสก์ท็อปพร้อม — แท็บ Ports → พอร์ต $PORT → รูปลูกโลก → Connect"

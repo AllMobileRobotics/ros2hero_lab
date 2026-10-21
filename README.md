@@ -1,13 +1,13 @@
 # ROS2 Hero lab
 
-ห้องฝึกของคอร์ส [ROS2 Hero](https://ros2hero.allmobilerobotics.com) — ROS 2 Jazzy + หุ่นจำลอง TurtleBot3 บนเดสก์ท็อป Ubuntu ในเบราว์เซอร์ ไม่ต้องลงโปรแกรม
+ห้องฝึกของคอร์ส [ROS2 Hero](https://ros2hero.allmobilerobotics.com) — ROS 2 Jazzy บนเดสก์ท็อป Ubuntu ในเบราว์เซอร์ ไม่ต้องลงโปรแกรม
 
 ## เปิดใช้
 
 1. ล็อกอิน GitHub (บัญชีฟรีใช้ได้)
 2. กดปุ่ม **Code → Codespaces → Create codespace on main** (หรือปุ่ม "เปิด lab" ในบทเรียน)
 3. รอ 2–4 นาทีครั้งแรก แล้วเปิดแท็บ **Ports** → พอร์ต **6080** (เดสก์ท็อป ROS 2) → รูปลูกโลก → กด **Connect**
-4. เปิดไฟล์ `ลองทำ_STEP2.txt` บนเดสก์ท็อป
+4. เปิดไฟล์ `เริ่มที่นี่.txt` บนเดสก์ท็อป แล้วเรียนตามบทบนเว็บ
 
 ใช้โควตา Codespaces ฟรีของบัญชีคุณเอง · ปิดแท็บแล้วเครื่องหยุดเองเมื่อไม่ได้ใช้
 

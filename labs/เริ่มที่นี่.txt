@@ -1,0 +1,15 @@
+ROS2 Hero — ห้องฝึก ROS 2 Jazzy
+
+บทเรียนอยู่ที่  https://ros2hero.allmobilerobotics.com
+เรียนตามลำดับ:  ROS คืออะไร  →  STEP 0 (หัวข้อ 3 เป็นต้นไป)  →  STEP 1
+
+เปิดเทอร์มินัล
+  ดับเบิลคลิก Terminator บนเดสก์ท็อป
+  คลิกขวาในหน้าต่าง → Split Horizontally = ได้หลายเทอร์มินัลในหน้าต่างเดียว
+
+ลองว่าพร้อมใช้
+  ros2 run demo_nodes_cpp talker
+  (กด Ctrl+C เพื่อหยุด)
+
+ถ้าคำสั่งถามรหัสผ่าน (sudo) ใช้  ubuntu
+ไฟล์ที่สร้างในเครื่องนี้อยู่จนกว่าจะลบ codespace ที่ github.com/codespaces
